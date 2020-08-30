@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+\title{Disease Diagnosis with AI}
+
+\author{Rishit Dagli \\ 
+        10 Grade, Thakur International School \\
+        \href{mailto:rishit.dagli@gmail.com}{rishit.dagli@gmail.com} }
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{The problem statement}
+
+In this project I majorly aim to show how we can use Machine Learning to diagnose diseases at an early stage. This may be possible with some sensor data which could monitor a persons vitals or from some test. However, in this project I particularly demonstrate using Machine Learning on chest X-Rays to predict if a person may have COVID using Computer Vision techniques made easy with \href{https://cloud.google.com/automl}{Google Cloud Auto ML}
+
+\subsection{Early diagnosis}
+
+\qquad A major reason behind being unable to treat diseases like pneumonia, cancer or other such acute diseases is due to them being diagnosed at a very later stage. Major aims under this domain would be to diagnose diseases at a very early stage from tests or reports. Early diagnosis of diseases could help a lot in these cases. As an example, just pneumonia accounts for 1.4 million deaths in children worldwide each year. A lot of these deaths could well be prevented with premature diagnosis. 
+
+\subsection{Easier diagnosis}
+
+\qquad Disease Diagnosis with AI also makes it very easy to receive diagnosis by just uploading for example image of an eye to diagnose eye disease, a CT scan, an X-Ray, chest X-Rays in this case or some other reports in a mobile or web-app to very easily diagnose diseases. It also allows to get faster diagnosis. People can at their homes itself perform diagnosis for diseases. Since, this would make it very easy to diagnose diseases it would considerably reduce the death rate due to these diseases.
+
+\subsection{Accurate diagnosis}
+
+In most cases AI algorithms could make better predictions than experts in the field too. However, at this stage I have not tested the model made by me with experts in the field as of now. But in a lot of cases AI could outperform the experts as it could find some spuriously correlated features in the images. While trying to increase the accuracy of the model I also make sure to reduce the False Positives from the model as they could particularly be harmful for the disease diagnosis scenario.
+
+A further great addition to this would be to also predict future health of a person with multiple past reports by employing a prognostic model to do so. However, at this stage I have not deployed such a model. 
+
+
+\printbibliography
+
+\end{document}
