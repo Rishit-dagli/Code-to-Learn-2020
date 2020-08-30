@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
@@ -12,3 +13,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: Submission/main.tex
+      - name: Upload Rendered Doc
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: rendered-doc
+          path: Submission/*.pdf   
