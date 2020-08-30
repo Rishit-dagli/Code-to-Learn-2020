@@ -17,4 +17,4 @@ jobs:
         uses: actions/upload-artifact@v2.1.4
         with:
           name: rendered-doc
-          path: Submission/*.pdf   
+          path: Submission/  
