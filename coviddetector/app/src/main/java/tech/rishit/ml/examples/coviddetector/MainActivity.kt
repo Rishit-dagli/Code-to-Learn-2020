@@ -38,7 +38,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import org.tensorflow.lite.examples.classification.R
-import org.tensorflow.lite.examples.classification.ml.RPSModel
+import org.tensorflow.lite.examples.classification.ml.CovidModel
 import org.tensorflow.lite.support.image.TensorImage
 import tech.rishit.ml.examples.coviddetector.ui.RecognitionAdapter
 import tech.rishit.ml.examples.coviddetector.util.YuvToRgbConverter
@@ -47,7 +47,7 @@ import tech.rishit.ml.examples.coviddetector.viewmodel.RecognitionListViewModel
 import java.util.concurrent.Executors
 
 // Constants
-private const val MAX_RESULT_DISPLAY = 3 // Maximum number of results displayed
+private const val MAX_RESULT_DISPLAY = 1 // Maximum number of results displayed
 private const val TAG = "TFL Classify" // Name for logging
 private const val REQUEST_CODE_PERMISSIONS = 999 // Return code after asking for permission
 private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA) // permission needed
@@ -217,8 +217,8 @@ class MainActivity : AppCompatActivity() {
         //private val options = Model.Options.Builder().setDevice(Model.Device.GPU).build()
 
         // If using GPU, use
-//        private val rpsModel = rpsModel.newInstance(ctx, options)
-        private val rpsModel = RPSModel.newInstance(ctx)
+//        private val covidModel = covidModel.newInstance(ctx, options)
+        private val covidModel = CovidModel.newInstance(ctx)
 
         override fun analyze(imageProxy: ImageProxy) {
 
@@ -226,10 +226,10 @@ class MainActivity : AppCompatActivity() {
 
             val tfImage = TensorImage.fromBitmap(toBitmap(imageProxy))
 
-            val outputs = rpsModel.process(tfImage)
-                .probabilityAsCategoryList.apply {
-                    sortByDescending { it.score } // Sort with highest confidence first
-                }.take(MAX_RESULT_DISPLAY) // take the top results
+            val outputs = covidModel.process(tfImage)
+                .scoresAsCategoryList//.apply {
+                     //{ it.score sortByDescending} // Sort with highest confidence first }
+            .take(MAX_RESULT_DISPLAY) // take the top results
 
             for (output in outputs) {
                 items.add(
