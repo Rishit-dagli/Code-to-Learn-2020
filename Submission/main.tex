@@ -26,6 +26,8 @@
 
 \maketitle
 
+\tableofcontents
+
 \section{The problem statement}
 
 In this project I majorly aim to show how we can use Machine Learning to diagnose diseases at an early stage. This may be possible with some sensor data which could monitor a persons vitals or from some test. However, in this project I particularly demonstrate using Machine Learning on chest X-Rays to predict if a person may have COVID using Computer Vision techniques made easy with \href{https://cloud.google.com/automl}{Google Cloud Auto ML}
@@ -53,6 +55,15 @@ In this project I majorly aim to show how we can use Machine Learning to diagnos
 \qquad As of now I have not made a production ready Android application and just a proof of concept to demonstrate that edge deployments for this use-case could be made. With support from Google Code To Learn I plan to mainly include the ideas of Federated Learning in the application considering that this is a sensitive application and the features to identify a disease may change. So, there would be a requirement of retraining the model on edge without affecting the privacy of the users.
 
 \qquad Google Cloud Auto ML also allows me to very easily deploy model to the web, this web application could be given to the doctors from where they could make diagnosis and also enter new users data which could help update the model constantly improving the performance of it. As highlighted earlier in this document making updates to the model and improving it in a sensitive use-case like this would be very important.
+
+\subsection{The process used}
+
+\qquad I use a very simple process to build the AI algorithm. I first explore a small set of my data to understand the data. To make sure that there are distinctive features in this small subset of the data, I make use of Keras (tf.keras) to implement a couple of convolutional layers which help me understand the global level features in the images. Being successful in finding some distinctive features in the images.
+
+\qquad I then use this subset of randomly selected images with Auto ML to present a proof that such a method would work as shown in the accompanying video submission. Having validated this, I use the complete set of images with Auto ML Vision to create an AI algorithm that could work in predicting new images if they are normal patients or COVID patients.
+
+\section{The data used}
+
 
 A further great addition to this would be to also predict future health of a person with multiple past reports by employing a prognostic model to do so. However, at this stage I have not deployed such a model. 
 
