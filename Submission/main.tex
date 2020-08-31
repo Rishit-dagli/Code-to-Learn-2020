@@ -64,6 +64,21 @@ In this project I majorly aim to show how we can use Machine Learning to diagnos
 
 \section{The data used}
 
+\qquad I use open-sourced Chest X-Rays images for COVID-19. The image data is collected from public sources only. As for the data I have referenced the paper - COVID-19 image data collection (Joseph Paul Cohen et al.) \cite{cohen2020covid19}. The images and data have been released publicly released at \cite{cohen2020covid} -  \href{https://github.com/ieee8023/covid-chestxray-dataset}{github.com/ieee8023/covid-chestxray-dataset}. The author has scraped the data from multiple websites majorly from - 
+\begin{itemize}
+    \item \href{https://radiopaedia.org/}{radiopaedia.org}
+    \item \href{https://www.sirm.org/category/senza-categoria/covid-19/}{sirm.org}
+    \item \href{https://www.eurorad.org/}{eurorad.org}
+    \item \href{https://coronacases.org/}{coronacases.org}
+\end{itemize}
+
+\qquad I have also used some pretty basic transformations on the image to better run the algorithms. I use $382$ labelled images in all. These are then split into $3$ sets - Train, validation and test sets according to $8:1:1$ ratio. So, I use -
+\begin{itemize}
+    \item $306$ images for training
+    \item $38$ images for validation
+    \item $38$ images for test
+\end{itemize}
+
 
 A further great addition to this would be to also predict future health of a person with multiple past reports by employing a prognostic model to do so. However, at this stage I have not deployed such a model. 
 
