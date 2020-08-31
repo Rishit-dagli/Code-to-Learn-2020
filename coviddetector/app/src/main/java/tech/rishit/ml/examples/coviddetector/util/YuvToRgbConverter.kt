@@ -23,11 +23,7 @@ import android.graphics.Bitmap
 import android.graphics.ImageFormat
 import android.graphics.Rect
 import android.media.Image
-import android.renderscript.Allocation
-import android.renderscript.Element
-import android.renderscript.RenderScript
-import android.renderscript.ScriptIntrinsicYuvToRGB
-import android.renderscript.Type
+import android.renderscript.*
 import org.tensorflow.lite.examples.classification.BuildConfig
 import java.nio.ByteBuffer
 
