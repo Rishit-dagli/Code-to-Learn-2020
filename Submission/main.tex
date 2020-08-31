@@ -28,19 +28,19 @@
 
 \section{The problem statement}
 
-In this project I majorly aim to show how we can use Machine Learning to diagnose diseases at an early stage. This may be possible with some sensor data which could monitor a persons vitals or from some test. However, in this project I particularly demonstrate using Machine Learning on chest X-Rays to predict if a person may have COVID using Computer Vision techniques made easy with \href{https://cloud.google.com/automl}{Google Cloud Auto ML}
+In this project I majorly aim to show how we can use Machine Learning to diagnose diseases at an early stage. The problem which I am focusing on is high deaths globally due to diseases like COVID, Tuberculosis or Pneumonia. There have been over 843 K deaths due to COVID (From Google News), deaths due to Pneumonia \& Tuberculosis are very high too. This may be possible with some sensor data which could monitor a persons' vitals or from some test. However, in this project I particularly demonstrate using Machine Learning on chest X-Rays to predict if a person may have COVID using Computer Vision techniques made easy with \href{https://cloud.google.com/automl}{Google Cloud Auto ML}
 
 \subsection{Early diagnosis}
 
-\qquad A major reason behind being unable to treat diseases like pneumonia, cancer or other such acute diseases is due to them being diagnosed at a very later stage. Major aims under this domain would be to diagnose diseases at a very early stage from tests or reports. Early diagnosis of diseases could help a lot in these cases. As an example, just pneumonia accounts for 1.4 million deaths in children worldwide each year. A lot of these deaths could well be prevented with premature diagnosis. 
+\qquad A major reason behind being unable to treat diseases like pneumonia, cancer or other such acute diseases is due to them being diagnosed at a very later stage. Major aims under this domain would be to diagnose diseases at a very early stage before it's progression to $3^{rd}$ or $4^{th}$ stage from tests or reports. Early diagnosis of diseases can work as key to success in recovery. As an example, just pneumonia accounts for 1.4 million deaths in children worldwide each year. A lot of these deaths could well be prevented with premature diagnosis. 
 
 \subsection{Easier diagnosis}
 
-\qquad Disease Diagnosis with AI also makes it very easy to receive diagnosis by just uploading for example image of an eye to diagnose eye disease, a CT scan, an X-Ray, chest X-Rays in this case or some other reports in a mobile or web-app to very easily diagnose diseases. It also allows to get faster diagnosis. People can at their homes itself perform diagnosis for diseases. Since, this would make it very easy to diagnose diseases it would considerably reduce the death rate due to these diseases.
+\qquad Disease Diagnosis with AI also makes it very easy to receive diagnosis by just uploading for example image of an eye to diagnose eye disease, a CT scan, an X-Ray, chest X-Rays in this case or some other reports in a mobile or web-app to very easily diagnose diseases. It also allows to get faster diagnosis. People can at their homes or local healthcare center itself perform diagnosis for diseases. Since, this would make it very easy to diagnose diseases it would considerably reduce the death rate due to these diseases.
 
 \subsection{Accurate diagnosis}
 
-\qquad In most cases AI algorithms could make better predictions than experts in the field too. However, at this stage I have not tested the model made by me with experts in the field as of now. But in a lot of cases AI could outperform the experts as it could find some spuriously correlated features in the images. While trying to increase the accuracy of the model I also make sure to reduce the False Positives from the model as they could particularly be harmful for the disease diagnosis scenario.
+\qquad In most cases AI algorithms could make better predictions than experts in the field too. However, at this stage I have not tested the model made by me with experts in the field as of now. But in a lot of cases AI could outperform the experts as it could find some spuriously correlated features in the images. While trying to increase the accuracy of the model I also make sure to reduce the False Positives from the model as they could particularly be harmful for the disease diagnosis scenario. With the help of expert medical practitioner I can adapt it to different medical situations.
 
 \qquad So, I feel that if such a system is implemented it would be very beneficial for a lot of people. My own grandmother suffers from an acute disease which has now reached the stage where it cannot be treated. The cause behind this is that it was diagnosed late. seeing this myself I got the inspiration to build an easy diagnosis system which could help in such cases. This is why I chose to work on this problem.
 
@@ -94,6 +94,8 @@ The Fig. \ref{fig:1} shows the trained model metrics, with Auto ML I receive a g
 \end{figure}
 
 \section{Future additions}
+
+\qquad In this project I have worked only on the ML part, but a real-life solution needs to be made in collaboration with medical experts to incorporate medical facts, observation, situation analysis and combining it with medical history of patients. Also, this does not aim to replace expertise of medical practitioners and their judgements but it can act as a super tool to in their hands.
 
 \qquad A further great addition to this would be to also predict future health of a person with multiple past reports by employing a prognostic model to do so. I also plan to add this to the project. In doing so it would create a system which could as an input use one's past reports and predict from it.
 
