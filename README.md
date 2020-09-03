@@ -5,6 +5,8 @@
 
 ## Submission Video
 
+Click on the image below or use [this URL](https://www.youtube.com/watch?v=s2HALfgO1hM).
+
 [![](https://github.com/Rishit-dagli/Code-to-Learn-2020/blob/master/Code%20To%20Learn.jpg)](https://www.youtube.com/watch?v=s2HALfgO1hM)
 
 ## Submission Document
